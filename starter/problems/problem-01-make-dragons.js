@@ -50,26 +50,15 @@ console.log(Dragon.getDragons(puff, toothless));
 // Should print... // [ 'Puff', 'Toothless' ]
 
 *************** YOUR CODE BELOW ***************************************/
- class Dragon {
+class Dragon {
    constructor(name, color) {
+
       this.name = name;
       this.color = color;
-   }
 
-   breathesFire() {
-
-      return `${this.name} breathes fire everywhere! BURN!!!!`
-
-   }
-   static getDragons(...dragons) {
-
-      return dragons.map((dragons) => dragons.name)
    }
 
 }
-
-
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

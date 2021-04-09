@@ -21,7 +21,7 @@ WILL THROW A 'TypeError` AND NOT RUN***
 4. Additionally, add two(2) instance methods to the `EvilDragon` class. a. A
     method named `dontInviteThemOverForDinner` that will console.log out each of
     the Evil Dragon's evil doings (stored in an array) as a separate console.log
-    for each evil thing in the format `${name} will ${evilDoing}` b. A second
+    for each evil thing in the format (`${name} will ${evilDoing}`) b. A second
     method named "burnsNemesis" that will return a string using `name` and
     `nemesis` property values formatted as "${name} destroys ${nemesis} with
     fire! WHOOOSH!!!".
@@ -73,8 +73,32 @@ everywhere! BURN!!!! //  Drogon destroys Night King with fire! WHOOOSH!!!
 
 *************** YOUR CODE BELOW ***************************************/
 
+const Dragon = require('./problem-01-make-dragons.js')
+
+class EvilDragon extends Dragon {
+    constructor(name, color, evilDoings, nemesis) {
+        super(name, color)
+        this.evilDoings = evilDoings;
+        this.nemesis = nemesis;
+
+    }
+
+    dontInviteThemOverForDinner() {
+
+        this.evilDoings.forEach((evilThing) => {
+
+            console.log(`${this.name} will ${evilThing}`)
+        })
 
 
+    }
+    burnsNemesis() {
 
+        return `${this.name} destroys ${this.nemesis} with fire! WHOOOSH!!!`
+    }
+
+}
+
+module.exports = EvilDragon
 
 /*********************************************************************/
