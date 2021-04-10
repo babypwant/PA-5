@@ -67,40 +67,5 @@ Let's make some Friendly and Evil Dragons! 🐲 🐉 🐲
       'allDragons` and add it to export statement that already exists.
    *************** YOUR CODE BELOW ***************************************/
 
-const FriendlyDragon = require('./problem-02-make-friendly-dragons.js')
-const EvilDragon = require('./problem-03-make-evil-dragons.js')
-const Dragon = require("./problem-01-make-dragons");
-const falkor = new FriendlyDragon(
-
-   'Falkor',
-   'white',
-   [
-      'save Atreyu from the swamp',
-      'save Atreyu from the Nothing',
-      'scare the local bullies into a dumpster'
-   ],
-   'Bastian'
-
-)
-
-
-const smaug = new EvilDragon(
-   'Smaug',
-   'black',
-   [
-      'take over your mountain kingdom',
-      'steal all your dwarven gold',
-      'burn down your floating village'
-   ],
-   'Dwarf King'
-
-)
-
-const allDragons = Dragon.getDragons(falkor, smaug)
-try {
-   module.exports = { falkor, smaug, allDragons };
-} catch {
-   module.exports = null;
-}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
