@@ -18,6 +18,13 @@ Let's create an class to represent a EvilDragon! 🐉
 ***NOTE: IF YOU DO NOT CORRECTLY EXPORT THE `EvilDragon` CLASS, THE MOCHA TESTS
 WILL THROW A 'TypeError` AND NOT RUN***
 
+4. Additionally, add two(2) instance methods to the `EvilDragon` class. a. A
+    method named `dontInviteThemOverForDinner` that will console.log out each of
+    the Evil Dragon's evil doings (stored in an array) as a separate console.log
+    for each evil thing in the format `${name} will ${evilDoing}` b. A second
+    method named "burnsNemesis" that will return a string using `name` and
+    `nemesis` property values formatted as "${name} destroys ${nemesis} with
+    fire! WHOOOSH!!!".
 
 In addition to Mocha, we recommend that you test your code manually using
 Node.js with the examples below. Use the command:
@@ -27,19 +34,29 @@ Node.js with the examples below. Use the command:
 Examples:
 
 const enderDragon = new EvilDragon("Ender Dragon", "black", ["spit a fireball at
-Steve", "rule over all the Endermen", "destroy all blocks in its way"],
-"Steve"); console.log(enderDragon);
-enderDragon.dontInviteThemOverForDinner();
-console.log(enderDragon.breathesFire());
-console.log(enderDragon.burnsNemesis());
+    Steve", "rule over all the Endermen", "destroy all blocks in its way"],
+    "Steve"); console.log(enderDragon);
+    enderDragon.dontInviteThemOverForDinner();
+    console.log(enderDragon.breathesFire());
+    console.log(enderDragon.burnsNemesis());
 
 // Should print...
 
+//  EvilDragon {//    name: 'Ender Dragon', //    color: 'black', //
+causesTrouble: [//      'spit a fireball at Steve', //      'rule over all the
+Endermen', //      'destroy all blocks in its way'
+//    ],
+//    nemesis: 'Steve'
+//  }
+//  Ender Dragon will spit a fireball at Steve //  Ender Dragon will rule over
+all the Endermen //  Ender Dragon will destroy all blocks in its way //  Ender
+Dragon breathes fire everywhere! BURN!!!! //  Ender Dragon destroys Steve with
+fire! WHOOOSH!!!
 
 const drogon = new EvilDragon("Drogon", "black-red",["eat all your livestock",
-"burn down your castle in Westeros","burn your father and brother"],"Night
-King"); console.log(drogon); drogon.dontInviteThemOverForDinner();
-console.log(drogon.breathesFire()); console.log(drogon.burnsNemesis());
+    "burn down your castle in Westeros","burn your father and brother"],"Night
+    King"); console.log(drogon); drogon.dontInviteThemOverForDinner();
+    console.log(drogon.breathesFire()); console.log(drogon.burnsNemesis());
 
 // Should print...
 
@@ -53,25 +70,11 @@ in Westeros', //      'burn your father and brother'
 Westeros //  Drogon will burn your father and brother //  Drogon breathes fire
 everywhere! BURN!!!! //  Drogon destroys Night King with fire! WHOOOSH!!!
 
-//  EvilDragon {//    name: 'Ender Dragon', //    color: 'black', //
-causesTrouble: [//      'spit a fireball at Steve', //      'rule over all the
-Endermen', //      'destroy all blocks in its way'
-//    ],
-//    nemesis: 'Steve'
-//  }
-//  Ender Dragon will spit a fireball at Steve //  Ender Dragon will rule over
-all the Endermen //  Ender Dragon will destroy all blocks in its way //  Ender
-Dragon breathes fire everywhere! BURN!!!! //  Ender Dragon destroys Steve with
-fire! WHOOOSH!!!
 
-4. Additionally, add two(2) instance methods to the `EvilDragon` class. a. A
-    method named `dontInviteThemOverForDinner` that will console.log out each of
-    the Evil Dragon's evil doings (stored in an array) as a separate console.log
-    for each evil thing in the format (`${name} will ${evilDoing}`) b. A second
-    method named "burnsNemesis" that will return a string using `name` and
-    `nemesis` property values formatted as "${name} destroys ${nemesis} with
-    fire! WHOOOSH!!!".
 *************** YOUR CODE BELOW ***************************************/
+
+
+
 
 
 /*********************************************************************/
