@@ -57,6 +57,14 @@ class Dragon {
       this.color = color;
 
    }
+   breathesFire() {
+
+      return `${this.name} breathes fire everywhere! BURN!!!!`
+   }
+   static getDragons(...dragons) {
+      return dragons.map((dragon) => dragon.name)
+
+   }
 
 }
 

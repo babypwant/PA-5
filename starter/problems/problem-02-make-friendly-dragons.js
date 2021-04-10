@@ -71,35 +71,29 @@ their friend Hiccup //  Toothless breathes fire everywhere! BURN!!!!
 
 
 *************** YOUR CODE BELOW ***************************************/
-
-
 const Dragon = require('./problem-01-make-dragons.js')
-
 
 class FriendlyDragon extends Dragon {
     constructor(name, color, lifeGoals, friend) {
         super(name, color)
-        this.lifeGoals = lifeGoals;
+        this.lifeGoals = lifeGoals
         this.friend = friend;
     }
-
-
 
     hasLifeGoals() {
         this.lifeGoals.forEach((goal) => {
 
             console.log(`${this.name} likes to ${goal}`)
-
         })
 
     }
-
-
     helpsPeople() {
 
         return `${this.name} helps their friend ${this.friend}`
-
     }
+
 }
-module.exports = FriendlyDragon
+
+module.exports = FriendlyDragon;
+
 /*********************************************************************/
