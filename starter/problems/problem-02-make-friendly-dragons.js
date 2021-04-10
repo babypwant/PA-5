@@ -2,6 +2,49 @@
 
 Let's create an class to represent a FriendlyDragon! 🐲
 
+
+In addition to Mocha, we recommend that you test your code manually using
+Node.js with the examples below. Use the command:
+
+`node problems/02-make-friendly-dragons.js`
+
+Examples:
+
+const puff = new FriendlyDragon("Puff", "green", ["live by the sea", "frolick in
+the autumn mist", "help small schildren"], "Jackie Paper");
+console.log(puff); console.log(puff.breathesFire());  //Friendly dragons can
+still breathe fire! puff.hasLifeGoals(); console.log(puff.helpsPeople());
+
+// Should print...
+
+//  FriendlyDragon {name: "Puff", //    color: "green", //    lifeGoals:
+[//      "live by the sea", //      "frolick in the autumn mist", //      "help
+small children"
+//    ],
+//    friend: "Jackie Paper"
+//  }
+//  Puff breathes fire everywhere! BURN!!!! //  Puff likes to live by the sea //
+Puff likes to frolick in the autumn mist //  Puff likes to help small children
+//  Puff helps their friend Jackie Paper
+
+const toothless = new FriendlyDragon("Toothless", "black", ["save the town of
+Burke", "fly with a kid on their back", "hang out with vikings"], "Hiccup");
+console.log(toothless); toothless.hasLifeGoals();
+console.log(toothless.helpsPeople()); console.log(toothless.breathesFire());
+//Friendly dragons can still breathe fire!
+
+// Should print...
+
+//  FriendlyDragon {//    name: "Toothless", //    color: "black", //
+lifeGoals: [//      "save the town of Burke", //      "fly with a kid on their
+back", //      "hang out with vikings"
+//    ],
+//    friend: "Hiccup"
+//  }
+//  Toothless likes to save the town of Burke //  Toothless likes to fly with a
+kid on their back //  Toothless likes to hang out with vikings //  Toothless helps
+their friend Hiccup //  Toothless breathes fire everywhere! BURN!!!!
+
 1. Require with CommonJS the Dragon class from the
    `./problem-01-make-dragons.js` module.
 
@@ -26,54 +69,30 @@ TESTS WILL THROW A 'TypeError` AND NOT RUN ***
     method named `helpsPeople` that will return a string using the `name` and
     `friend` property values formatted as `${name} helps their friend ${friend}`.
 
-In addition to Mocha, we recommend that you test your code manually using
-Node.js with the examples below. Use the command:
-
-`node problems/02-make-friendly-dragons.js`
-
-Examples:
-
-const puff = new FriendlyDragon("Puff", "green", ["live by the sea", "frolick in
-    the autumn mist", "help small schildren"], "Jackie Paper");
-    console.log(puff); console.log(puff.breathesFire());  //Friendly dragons can
-    still breathe fire! puff.hasLifeGoals(); console.log(puff.helpsPeople());
-
-// Should print...
-
-//  FriendlyDragon {name: "Puff", //    color: "green", //    lifeGoals:
-[//      "live by the sea", //      "frolick in the autumn mist", //      "help
-small children"
-//    ],
-//    friend: "Jackie Paper"
-//  }
-//  Puff breathes fire everywhere! BURN!!!! //  Puff likes to live by the sea //
-Puff likes to frolick in the autumn mist //  Puff likes to help small children
-//  Puff helps their friend Jackie Paper
-
-const toothless = new FriendlyDragon("Toothless", "black", ["save the town of
-    Burke", "fly with a kid on their back", "hang out with vikings"], "Hiccup");
-    console.log(toothless); toothless.hasLifeGoals();
-    console.log(toothless.helpsPeople()); console.log(toothless.breathesFire());
-    //Friendly dragons can still breathe fire!
-
-// Should print...
-
-//  FriendlyDragon {//    name: "Toothless", //    color: "black", //
-lifeGoals: [//      "save the town of Burke", //      "fly with a kid on their
-back", //      "hang out with vikings"
-//    ],
-//    friend: "Hiccup"
-//  }
-//  Toothless likes to save the town of Burke //  Toothless likes to fly with a
-kid on their back //  Toothless likes to hang out with vikings //  Toothless helps
-their friend Hiccup //  Toothless breathes fire everywhere! BURN!!!!
-
-
 
 *************** YOUR CODE BELOW ***************************************/
+const Dragon = require('./problem-01-make-dragons.js')
 
+class FriendlyDragon extends Dragon {
+    constructor(name, color, lifeGoals, friend) {
+        super(name, color)
+        this.lifeGoals = lifeGoals
+        this.friend = friend
+    }
 
+    hasLifeGoals() {
+        this.lifeGoals.forEach((goal) => console.log(`${this.name} likes to ${goal}`))
+    }
 
+    helpsPeople() {
+
+        return `${this.name} helps their friend ${this.friend}`
+
+    }
+
+}
+
+module.exports = FriendlyDragon;
 
 
 /*********************************************************************/
